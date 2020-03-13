@@ -1,4 +1,4 @@
-# Angular Firebase Website (with CRUD realtime-databse, User Authentication and Authorisation; and Firebase Hoisting).
+# Angular Firebase Website (with CRUD realtime-databse, User Authentication and Authorisation, Angular Router; and Firebase Hoisting).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
 
