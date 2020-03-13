@@ -1,0 +1,42 @@
+<section class="jumbotron">
+
+  <div class="container">
+    <div class="container-fluid">
+      <h1>Research Students</h1>
+    </div>
+    <div
+      class="card"
+      *ngFor="let s of studentsFireDbArray; index as i"
+      style="width: 18rem;"
+    >
+    <div>
+      <img src="{{ s.avatar }}" class="card-img-top" />
+    </div>
+      
+      <div class="card-body">
+        <h2>{{ s.name }}</h2>
+        <p>{{ s.status }}</p>
+      </div>
+      <div id="btns">
+        <button *ngIf="getUserState()" type="submit" (click)="delete(s.$key)">
+          <span
+            class="
+      glyphicon glyphicon-trash"
+          ></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <button
+    *ngIf="getUserState()"
+    class="btn btn-info"
+    type="submit"
+    routerLink="studentform"
+  >
+    <span class="glyphicon glyphicon-plus"></span>
+  </button>
+</section>
+
+<router-outlet></router-outlet>

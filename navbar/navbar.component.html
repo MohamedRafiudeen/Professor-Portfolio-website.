@@ -1,0 +1,64 @@
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-primary">
+  <a class="navbar-brand mr-auto" routerLink="home">Dr.Senthil</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link active" routerLink="home"
+          >Home <span class="sr-only">(current)</span></a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="education">Education</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          data-toggle="dropdown"
+          href="#"
+          role="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Research Works</a
+        >
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="journalMenu">Research Papers</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="studentsdisplay"
+            >Research Students</a
+          >
+        </div>
+      </li>
+
+
+
+      <li class="nav-item" *ngIf="!getAuthState()">
+        <a class="nav-link" routerLink="signIn">Log In</a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          *ngIf="getAuthState()"
+          class="nav-link"
+          id="logOut"
+          (click)="logOut()"
+        >
+          Log Out</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

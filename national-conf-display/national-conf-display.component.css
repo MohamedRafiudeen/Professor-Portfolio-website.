@@ -1,0 +1,89 @@
+.jumbotron{
+    font-family: 'Courier Prime', monospace;
+    font-size: 15px;
+    height: 900px;
+    min-width: 100%;
+    overflow: hidden;
+    background-image: url(../images/triangles-3320452_1280.png);
+}
+
+#container{
+    position: relative;
+    height: 800px;
+    width: 90%;
+    overflow: scroll;
+    margin: 0px auto;
+    box-shadow: 4px 2px 5px black;
+}
+
+/*-webkit- (Chrome, Safari, newer versions of Opera):*/
+#container::-webkit-scrollbar { width: 0 !important }
+
+/*-moz- (Firefox):*/
+#container { overflow: -moz-scrollbars-none; }
+
+/*-ms- (Internet Explorer +10):*/
+#container { -ms-overflow-style: none; }
+
+
+
+h1{
+    font-size: x-large;
+    color: white;
+}
+
+.articleDiv{
+    min-height: 150px;
+    max-height: 150px;
+    width: 90%;
+    background-color: white;
+    box-shadow: -2px 2px 4px black;
+    margin: 26px auto;
+    overflow: scroll;
+}
+
+/*-webkit- (Chrome, Safari, newer versions of Opera):*/
+.articleDiv::-webkit-scrollbar { width: 0 !important }
+
+/*-moz- (Firefox):*/
+.articleDiv { overflow: -moz-scrollbars-none; }
+
+/*-ms- (Internet Explorer +10):*/
+.articleDiv { -ms-overflow-style: none; }
+
+.articleDiv:hover{
+    cursor: pointer;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 6%;
+    margin-top: 20px;
+}
+
+p{
+    padding: 1% 1%;
+    font-size: 16px;
+    margin-left: 6%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+
+
+
+/*Media queries*/
+@media only screen and (max-width:600px){
+    p{
+        font-size: 8px;
+        margin-left: 3%;
+        margin-bottom: 1%;
+        
+    }
+    .articleDiv{
+        min-height: 80px;
+        max-height: 80px;
+        margin: 2% auto;
+    }
+}

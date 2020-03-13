@@ -1,0 +1,38 @@
+<div class="box">
+  <h1>Add National Conference Paper..!</h1>
+  <form
+    [formGroup]="this.formService.nationalConferenceForm"
+    (ngSubmit)="submitted()"
+  >
+    <input hidden type="text" formControlName="$key" class="from-control" />
+
+    <div class="form-group">
+      <label for="textArea">Article Content</label>
+      <textarea
+        class="form-control"
+        formControlName="article"
+        id="textArea"
+        rows="3"
+        placeholder="your article here.."
+      ></textarea>
+    </div>
+
+    <button
+      *ngIf="this.formService.updateNationalConfPaper == false"
+      type="submit"
+      class="btn btn-primary"
+    >
+      Submit
+      <i class="fa fa-send ml-2"></i>
+    </button>
+
+    <button
+      *ngIf="this.formService.updateNationalConfPaper == true"
+      type="submit"
+      class="btn btn-primary"
+    >
+      update
+      <i class="fa fa-send ml-2"></i>
+    </button>
+  </form>
+</div>

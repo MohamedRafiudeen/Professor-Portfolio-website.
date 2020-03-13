@@ -1,0 +1,36 @@
+<link
+  href="https://fonts.googleapis.com/css?family=Courier+Prime&display=swap"
+  rel="stylesheet"
+/>
+
+<section class="jumbotron">
+  <div id="container">
+    <h1>National Conference Papers</h1>
+    <div
+      class="articleDiv card"
+      *ngFor="let f of NationalConfArray; index as i"
+    >
+      <p>{{ f.article }}</p>
+
+      <div class="container">
+        <button *ngIf="getUserState()" (click)="populateForm(f)" type="submit">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </button>
+
+        <button *ngIf="getUserState()" type="submit" (click)="delete(f.$key)">
+          <span class="glyphicon glyphicon-trash"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <button
+    *ngIf="getUserState()"
+    class="btn btn-info"
+    type="submit"
+    routerLink="natConfForm"
+  >
+    <span class="glyphicon glyphicon-plus"></span>
+  </button>
+</section>
+<router-outlet></router-outlet>

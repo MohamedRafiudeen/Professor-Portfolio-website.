@@ -1,0 +1,25 @@
+.container-fluid{
+    background-image: url(../images/abstract-1264071_1280.png);
+    min-height: 400px;
+    display: block;
+    text-align: center;
+}
+
+h1{
+    color: blue;
+    padding-top: 3%;
+}
+
+form{
+    max-width: 40%;
+    min-height: 80%;
+    margin: 10% auto;
+}
+
+img{
+    height: 100px;
+    width: 100px;
+}
+
+
+

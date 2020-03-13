@@ -1,0 +1,50 @@
+<section *ngIf="getAuthState()" class="container-fluid">
+  <h1>Add Student..!</h1>
+
+  <img src= "{{imgSrc}}" alt="">
+  <form
+    [formGroup]="this.formService.studentForm"
+    (ngSubmit)="onSubmit(this.formService.studentForm.value)"
+    class="form-horizontal"
+  >
+
+    <div class="form-group">
+      <label for="#studentAvatar">Avatar</label>
+      <input
+        formControlName="avatar"
+        id="studentAvatar"
+        type="file"
+        class="form-control"
+        placeholder="select Image"
+        (change) = readImage($event);
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="#studentName">Student Name</label>
+      <input
+        formControlName="name"
+        id="studentName"
+        type="text"
+        class="form-control"
+        placeholder="Enter student Name"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="#studentStatus">Student Dept.</label>
+      <input
+        formControlName="status"
+        id="studentStatus"
+        type="text"
+        class="form-control"
+        placeholder="Enter student Dept."
+      />
+    </div>
+
+    <button class="btn btn-primary" type="submit">
+      Submit..!
+    </button>
+
+  </form>
+</section>
